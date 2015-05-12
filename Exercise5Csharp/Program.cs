@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +20,7 @@ namespace Exercise5Csharp
                 price = price - 0.15M * price;
             }
             else
-                 price = price - 0.05M * price;
+                price = price - 0.05M * price;
         }
         static void Main(string[] args)
         {
