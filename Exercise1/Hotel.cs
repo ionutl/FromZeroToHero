@@ -59,7 +59,7 @@ namespace Exercise1
                     return distanceToCenter;
                 }
             }
-            return 0;
+            return distanceToCenter;
 
         }
 

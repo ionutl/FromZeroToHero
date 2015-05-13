@@ -29,7 +29,7 @@ namespace Exercise1
             Hotel.SetDistanceMesurementUnit("KM");
 
 
-            Console.WriteLine("Distance to center for hotel {0} is {1} {2}", hotel.name,
+            Console.WriteLine("Distance to center for hotel {0} is {1:0.000} {2}", hotel.name,
                 hotel.GetDistanceToCenter("Miles"), "Miles");
         }
     }
