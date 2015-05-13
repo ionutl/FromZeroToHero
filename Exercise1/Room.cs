@@ -23,29 +23,13 @@ namespace Exercise1
         public int number;
         public int floor;
 
-        public void RoomRoomTypes(RoomTypes type)
-        {
-            this.type = type;
-        }
-
-        public void RoomDescription(string description)
-        {
-            this.description = description;
-        }
-
-        public void RoomPlaces(int places)
-        {
-            this.places = places;
-        }
-
-        public void RoomNumber(int number)
+        public Room(int number, string description, int places, int floor, RoomTypes type)
         {
             this.number = number;
-        }
-
-        public void RoomFloor(int floor)
-        {
+            this.description = description;
+            this.places = places;
             this.floor = floor;
+            this.type = type;
         }
 
         public void DisplayInfo()

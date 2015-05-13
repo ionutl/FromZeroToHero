@@ -16,35 +16,16 @@ namespace Exercise1
         public DateTime openingDate;
         public Room[] rooms;
 
-       
-        public void HotelName(string name)
+
+        public Hotel(string name, string description, string address, int stars,
+                    double distanceToCenter, DateTime openingDate, Room[] rooms)
         {
             this.name = name;
-        }
-        public void HotelDescription(string description)
-        {
             this.description = description;
-        }
-        public void HotelAddress(string address)
-        {
             this.address = address;
-        }
-
-        public void HotelDistanceToCenter(double distanceToCenter)
-        {
-            this.distanceToCenter = distanceToCenter;
-        }
-
-        public void HotelStars(int stars)
-        {
             this.stars = stars;
-        }
-        public void HotelOpeningDate(DateTime openingDate)
-        {
+            this.distanceToCenter = distanceToCenter;
             this.openingDate = openingDate;
-        }
-        public void HotelNumberRooms(Room[] rooms)
-        {
             this.rooms = rooms;
         }
 
