@@ -13,7 +13,21 @@ namespace Exercise1
         public string address;
         public int stars;
         public double distanceToCenter;
-        DateTime openingDate;
-        public int[] rooms;
+        public DateTime openingDate;
+        public Room[] rooms;
+
+        public void DisplayInfo()
+        {
+            Console.WriteLine("Details of Hotel: {0}", name);
+            Console.WriteLine("Description: {0}", description);
+            Console.WriteLine("Address: {0}", address);
+            Console.WriteLine("Stars {0}", new string('*', stars));
+            Console.WriteLine("Distance to center: {0} km", distanceToCenter);
+            Console.WriteLine("Opening Date: {0}", openingDate.ToShortDateString());
+            foreach (Room room in rooms)
+            {
+                room.DisplayInfo();
+            }
+        }
     }
 }
