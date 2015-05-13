@@ -15,7 +15,7 @@ namespace Exercise1
         public double distanceToCenter;
         public DateTime openingDate;
         public Room[] rooms;
-        public static string distanceMesurementUnit;
+        private static string distanceMesurementUnit;
 
         static Hotel()
         {
@@ -32,6 +32,16 @@ namespace Exercise1
             this.distanceToCenter = distanceToCenter;
             this.openingDate = openingDate;
             this.rooms = rooms;
+        }
+
+        public static void SetDistanceMesurementUnit(string measurementUnit)
+        {
+            distanceMesurementUnit = measurementUnit;
+        }
+
+        public static string GetDistanceMesurementUnit()
+        {
+            return distanceMesurementUnit;
         }
 
         public void DisplayInfo()

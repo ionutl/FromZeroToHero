@@ -20,10 +20,16 @@ namespace Exercise1
                                     @"Piaţa Unirii Street No. 5, 700056 Iaşi, Romania", 4, 1.6, new DateTime(1975, 10, 25),
                                     new Room[] { room1, room2 });
 
+            Hotel hotel2 = new Hotel("Traian Hotel", @"Traian Hotel is one of the most good looking hotel in Iasi Romania.",
+                                    @"Piaţa Unirii Street No. 5, 700056 Iaşi, Romania", 4, 1.8, new DateTime(1975, 10, 25),
+                                    new Room[] { room1, room2 });
+
+            Hotel.SetDistanceMesurementUnit("KM");
+            Console.WriteLine("Distance measurement unit is {0}", Hotel.GetDistanceMesurementUnit());
+
             hotel.rooms = new Room[] { room1, room2 };
-
+            hotel2.DisplayInfo();
             hotel.DisplayInfo();
-
         }
     }
 }
