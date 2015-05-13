@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise1
 {
-    public class Hotel
+    class Hotel
     {
         public string name;
         public string description;
@@ -15,6 +15,7 @@ namespace Exercise1
         public double distanceToCenter;
         public DateTime openingDate;
         public Room[] rooms;
+
         private static string distanceMesurementUnit;
 
         static Hotel()
@@ -32,6 +33,34 @@ namespace Exercise1
             this.distanceToCenter = distanceToCenter;
             this.openingDate = openingDate;
             this.rooms = rooms;
+        }
+
+        public double GetDistanceToCenter(string unit)
+        {
+            if (unit == "KM")
+            {
+                if (distanceMesurementUnit == "KM")
+                {
+                    return distanceToCenter;
+                }
+                else
+                {
+                    return DistanceConverter.ConvertMilesToKilometers(distanceToCenter);
+                }
+            }
+            else if (unit == "Miles")
+            {
+                if (distanceMesurementUnit == "KM")
+                {
+                    return DistanceConverter.ConvertKilometersToMiles(distanceToCenter);
+                }
+                else
+                {
+                    return distanceToCenter;
+                }
+            }
+            return 0;
+
         }
 
         public static void SetDistanceMesurementUnit(string measurementUnit)
@@ -56,7 +85,6 @@ namespace Exercise1
             {
                 room.DisplayInfo();
             }
-
         }
     }
 }
