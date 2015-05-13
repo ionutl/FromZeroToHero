@@ -23,6 +23,31 @@ namespace Exercise1
         public int number;
         public int floor;
 
+        public void RoomRoomTypes(RoomTypes type)
+        {
+            this.type = type;
+        }
+
+        public void RoomDescription(string description)
+        {
+            this.description = description;
+        }
+
+        public void RoomPlaces(int places)
+        {
+            this.places = places;
+        }
+
+        public void RoomNumber(int number)
+        {
+            this.number = number;
+        }
+
+        public void RoomFloor(int floor)
+        {
+            this.floor = floor;
+        }
+
         public void DisplayInfo()
         {
             Console.WriteLine("Details of Room {0}", number);
