@@ -43,7 +43,7 @@ namespace Ex1
             }
         }
 
-        private string address;
+        protected string address;
         public string Address
         {
             get { return address; }

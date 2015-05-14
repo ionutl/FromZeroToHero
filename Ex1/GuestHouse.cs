@@ -15,5 +15,6 @@ namespace Ex1
         {
             ComfortIndex = comfortIndex;
         }
+
     }
 }

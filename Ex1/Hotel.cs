@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex1
 {
-    class Hotel : Property
+    sealed class Hotel : Property
     {
         public int Likes { get; set; }
         public Hotel(string name, string description, string address, int stars,
@@ -14,6 +14,16 @@ namespace Ex1
             : base(name, description, address, stars, distanceToCenter, openingDate, rooms)
         {
             Likes = likes;
+        }
+
+        public void ChangeAddress(string value)
+        {
+            if (value.Length <= 100)
+            {
+                address = value;
+            }
+            else
+                address = string.Empty;
         }
     }
 }
