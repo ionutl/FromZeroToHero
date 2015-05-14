@@ -17,16 +17,18 @@ namespace Ex1
 
     public class Room
     {
+        public bool HasAirConditioning { get; set; }
+        public bool HasFlatTVScreen { get; set; }
         private string description;
         public string Description
         {
             get { return description; }
             set
             {
-                if (value.Length > 500)
-                    Console.WriteLine("Error! Name must be less than 500 characters!");
-                else
+                if (value.Length <= 500)
                     description = value;
+                else
+                    Console.WriteLine("Error! Name must be less than 500 characters!");
             }
         }
 
@@ -36,10 +38,10 @@ namespace Ex1
             get { return floor; }
             set
             {
-                if ((value < 0)&& (value > 10000))
-                    Console.WriteLine("Error! Can't be negative or is too much!");
-                else
+                if ((value >= 0)&& (value <= 10000))
                     floor = value;
+                else
+                    Console.WriteLine("Error! Can't be negative or is too much!");
             }
         }
 
@@ -49,10 +51,10 @@ namespace Ex1
             get { return number; }
             set
             {
-                if ((value < 0) && (value > 10000))
-                    Console.WriteLine("Error! Can't be negative or is too much!");
-                else
+                if ((value >= 0) && (value <= 10000))
                     number = value;
+                else
+                    Console.WriteLine("Error! Can't be negative or is too much!");
             }
         }
 
