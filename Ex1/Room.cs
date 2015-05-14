@@ -6,58 +6,18 @@ using System.Threading.Tasks;
 
 namespace Ex1
 {
-    public enum RoomTypes
+    enum RoomTypes
     {
         Single,
         Double,
         Twin,
         Duplex,
-        KingBedroom
+        KingBedroom,
     }
 
-    public class Room
+    class Room
     {
-        public bool HasAirConditioning { get; set; }
-        public bool HasFlatTVScreen { get; set; }
-        private string description;
-        public string Description
-        {
-            get { return description; }
-            set
-            {
-                if (value.Length <= 500)
-                    description = value;
-                else
-                    Console.WriteLine("Error! Name must be less than 500 characters!");
-            }
-        }
-
-        private int floor;
-        public int Floor
-        {
-            get { return floor; }
-            set
-            {
-                if ((value >= 0)&& (value <= 10000))
-                    floor = value;
-                else
-                    Console.WriteLine("Error! Can't be negative or is too much!");
-            }
-        }
-
-        private int number;
-        public int Number
-        {
-            get { return number; }
-            set
-            {
-                if ((value >= 0) && (value <= 10000))
-                    number = value;
-                else
-                    Console.WriteLine("Error! Can't be negative or is too much!");
-            }
-        }
-
+        #region Fields
         private RoomTypes type;
         public RoomTypes Type
         {
@@ -72,6 +32,23 @@ namespace Ex1
                     case RoomTypes.Twin: places = 1; break;
                     case RoomTypes.KingBedroom:
                     case RoomTypes.Duplex: places = 2; break;
+                }
+            }
+        }
+
+        private string description;
+        public string Description
+        {
+            get { return description; }
+            set
+            {
+                if (value.Length <= 500)
+                {
+                    description = value;
+                }
+                else
+                {
+                    description = string.Empty;
                 }
             }
         }
@@ -109,6 +86,24 @@ namespace Ex1
             }
         }
 
+        private int number;
+        public int Number
+        {
+            get { return number; }
+            set { number = value; }
+        }
+
+        private int floor;
+        public int Floor
+        {
+            get { return floor; }
+            set { floor = value; }
+        }
+
+        public bool HasAirConditioning { get; set; }
+        public bool HasFlatTVScreen { get; set; }
+        #endregion
+
         public Room(int number, string description, int places, int floor, RoomTypes type)
         {
             this.Number = number;
@@ -116,6 +111,10 @@ namespace Ex1
             this.Places = places;
             this.Floor = floor;
             this.Type = type;
+        }
+        public Room()
+        {
+
         }
 
         public void DisplayInfo()
