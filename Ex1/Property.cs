@@ -179,6 +179,11 @@ namespace Ex1
             return distanceMesurementUnit;
         }
 
+        public virtual double CalculateRating()
+        {
+            return 2 * stars;
+        }
+
         public void DisplayInfo()
         {
             Console.WriteLine("Details of Hotel: {0}", Name);

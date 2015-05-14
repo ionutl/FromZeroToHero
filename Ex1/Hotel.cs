@@ -25,5 +25,11 @@ namespace Ex1
             else
                 address = string.Empty;
         }
+
+        public override double CalculateRating()
+        {
+            int trimLikes = Likes > 10000 ? 10000 : Likes;
+            return trimLikes / 1000 * 0.3 + 2 * Stars * 0.7;
+        }
     }
 }
