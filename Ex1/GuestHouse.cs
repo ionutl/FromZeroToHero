@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex1
 {
-    class Hotel : Property
+    class GuestHouse:Property
     {
     }
 }
