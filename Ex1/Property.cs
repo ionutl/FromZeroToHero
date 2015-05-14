@@ -118,7 +118,7 @@ namespace Ex1
         public bool HasIndoorPool { get; set; }
         public bool HasWireless { get; set; }
 
-        private static string distanceMesurementUnit;
+        public static string distanceMesurementUnit;
         #endregion
 
         static Property()

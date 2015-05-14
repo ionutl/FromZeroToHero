@@ -16,7 +16,7 @@ namespace Ex1
             Room room2 = new Room(2, @"A beautiful room for 2 person with a beautiful view towords the city cener", 2,
                                    7, RoomTypes.Double);
 
-            Property property1 = new Hotel("Unirea Hotel", @"Unirea Hotel is one of the most good looking hotel in Iasi Romania.",
+            Hotel property1 = new Hotel("Unirea Hotel", @"Unirea Hotel is one of the most good looking hotel in Iasi Romania.",
                                     @"Piaţa Unirii Street No. 5, 700056 Iaşi, Romania", 4, 1.6, new DateTime(1975, 10, 25),
                                     new Room[] { room1, room2 }, 6500);
 
@@ -26,16 +26,14 @@ namespace Ex1
             Room room4 = new Room(2, @"A beautiful room for 2 person with a beautiful view towords the city cener", 2,
                                    7, RoomTypes.Double);
 
-            Property property2 = new GuestHouse("Unirea Hotel", @"Unirea Hotel is one of the most good looking hotel in Iasi Romania.",
+            GuestHouse property2 = new GuestHouse("Unirea House", @"Unirea Hotel is one of the most good looking hotel in Iasi Romania.",
                                     @"Piaţa Unirii Street No. 5, 700056 Iaşi, Romania", 4, 1.6, new DateTime(1975, 10, 25),
                                     new Room[] { room3, room4 }, 7);
 
+            property1.DisplayInfoHotel();
+            property2.DisplayInfoGuest();
 
-            double p1Rating = property1.CalculateRating();
-            Console.WriteLine("{0} has a rating of {1}", property1.Name, p1Rating);
-
-            double p2Rating = property2.CalculateRating();
-            Console.WriteLine("{0} has a rating of {1}", property2.Name, p2Rating);
+            
         }
     }
 }
