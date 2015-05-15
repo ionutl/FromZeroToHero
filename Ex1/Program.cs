@@ -32,7 +32,6 @@ namespace Ex1
 
             property1.DisplayInfoHotel();
             property2.DisplayInfoGuest();
-
             
         }
     }
