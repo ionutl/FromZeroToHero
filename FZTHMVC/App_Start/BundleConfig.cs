@@ -21,7 +21,8 @@ namespace FZTHMVC
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/styles.css",
                       "~/Content/site.css"));
         }
     }

@@ -30,6 +30,7 @@ namespace FZTHMVC.Controllers
         [HttpGet]
         public string Hello(Person person)
         {
+
             return person.ToString();
         }
     }
@@ -42,6 +43,15 @@ namespace FZTHMVC.Controllers
             return String.Format("Hello {0} of age {1}", Name, Age);
         }
     }
-    
+
+    public class PersonList
+    {
+        private List<Person> persons;
+        public List<Person> Persons { get { return persons; } }
+        public PersonList()
+        {
+            persons = new List<Person> { };
+        }
+    }
     
 }

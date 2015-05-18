@@ -11,7 +11,22 @@ namespace FZTHMVC.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return Content("Here will be the list of hotels.");
+            return View();
         }
+
+        public ActionResult addHotel()
+        {
+            return View();
+        }
+
+      /*  public ActionResult Detail(Int32 id)
+        {
+            var hotel = Data.Hotels.FirstOrDefault(x => x.Id == id);
+            if (hotel != null)
+            {
+                return Json(hotel, JsonRequestBehavior.AllowGet);
+            }
+            return HttpNotFound();
+        }*/
 	}
 }

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Add Hotel";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>addHotel</h2>
+
+<div class="row">
+    <aside class="col-md-3">
+        <ul class="asideMenu">
+            <h3>Page navigation</h3>
+            <li><a href="#reservation">Reservation Form</a></li>
+            <li><a href="#hotelList">Hotel List</a></li>
+            <li><a href="#lastMinute">Last minute deals</a></li>
+        </ul>
+
+    </aside>
+
+    <article class="col-md-9">
+
+        <section class="col-md-6 col-md-offset-3">
+
+            <form method="Get" action="#" id="addHotel" class="form-horizontal">
+                <label for="hotelName">Name</label>
+                <input type="text" id="hotelName" class="form-control" maxlength="20" autofocus required />
+                <label for="hotelAddress">Address</label>
+                <input type="text" id="hotelAddress" class="form-control" required />
+                <label for="cityList">City</label>
+                <select id="cityList" required class="form-control">
+                    <option>Select a city</option>
+                    <option>Iasi</option>
+                    <option>Bacau</option>
+                    <option>Bucuresti</option>
+                    <option>Londra</option>
+                </select>
+                <label for="hotelEmail">Email</label>
+                <input type="email" class="form-control" />
+                <label for="hotelTel">Phone</label>
+                <input type="tel" id="hotelTel" class="form-control" required />
+                <label for="hotelUrl">Site</label>
+                <input type="Url" id="hotelUrl" class="form-control" />
+                <label for="hotelStars">Stars</label>
+                <input type="range" min=1 max=5 class="form-control" />
+                <label for="hotelRooms">Rooms</label>
+                <input type="number" id="hotelRooms" min="5" max="50" class="form-control" required />
+                <button type="submit" class="btn btn-success">Add</button>
+                <button class="btn btn-danger">Cancel</button>
+
+
+
+            </form>
+        </section>
+    </article>
+</div>
