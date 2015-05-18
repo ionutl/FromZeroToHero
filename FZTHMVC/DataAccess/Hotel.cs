@@ -9,9 +9,10 @@ namespace FZTHMVC.DataAccess
     {
         public Int32 Id { get; set; }
         public String Name { get; set; }
-        public String Description { get; set; }
-        public String Country { get; set; }
+        public String Adress { get; set; }
         public String City { get; set; }
+        public String Site { get; set; }
+        public Int32 Rooms { get; set; }
         public Int32 Rating { get; set; }
     }
 }

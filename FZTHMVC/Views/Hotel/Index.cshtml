@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
@@ -49,30 +48,26 @@
                     <th>Numar camere</th>
                     <th>Numar stele</th>
                 </tr>
-                <tr>
-                    <td>Hotel Traian</td>
-                    <td>Piata Unirii nr. 1</td>
-                    <td>Iasi</td>
-                    <td><a href="http://www.grandhoteltraian.ro">www.grandhoteltraian.ro</a></td>
-                    <td>30</td>
-                    <td><img src="Content\Images\star.jpg" /><img src="Content\Images\star.jpg" /> <img src="Content\Images\star.jpg" /> <img src="Content\Images\star.jpg" /></td>
-                </tr>
-                <tr>
-                    <td>Hotel 3</td>
-                    <td>Strada Libertatii nr 6</td>
-                    <td>Bacau</td>
-                    <td><a href="http://www.grandhoteltraian.ro">www.grandhoteltraian.ro</a></td>
-                    <td>15</td>
-                    <td><img src="Content\Images\star.jpg" /> <img src="Content\Images\star.jpg" /></td>
-                </tr>
-                <tr>
-                    <td>Hotel 4</td>
-                    <td>Strada Malinelor nr 7</td>
-                    <td>Bucuresti</td>
-                    <td><a href="http://www.grandhoteltraian.ro">www.grandhoteltraian.ro</a></td>
-                    <td>19</td>
-                    <td> <img src="Content\Images\star.jpg" /></td>
-                </tr>
+
+                @using FZTHMVC.DataAccess
+                @foreach (Hotel h in Data.Hotels)
+                {
+                    <tr>
+                        <td>@h.Name</td>
+                        <td>@h.Adress</td>
+                        <td>@h.City</td>
+                        <td>@h.Site</td>
+                        <td>@h.Rooms</td>
+                        <td>
+                            @for (int i = 0; i < h.Rating; i++)
+                            {
+                                <img src="Content/Images/star.jpg" />
+                            }
+                        </td>
+                        
+                    </tr>
+
+                }
             </table>
         </section>
 

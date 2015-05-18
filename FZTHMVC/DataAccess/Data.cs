@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace FZTHMVC.DataAccess
 {
@@ -17,28 +18,31 @@ namespace FZTHMVC.DataAccess
                     {
                         Id = 1,
                         Name = "Hotel International",
-                        Description = "DFescriere hotel International",
-                        Rating = 4,
+                        Adress = "DFescriere hotel International",
                         City = "Iasi",
-                        Country = "Iasi"
+                        Site = "http://www.grandhoteltraian.ro",
+                        Rooms = 30,
+                        Rating = 4  
                     },
                     new Hotel
                     {
                         Id = 2,
                         Name = "Hotel Unique",
-                        Description = "Un hotel unic in Bucuresti",
-                        Rating = 4,
+                        Adress = "Descriere national",
                         City = "Bucuresti",
-                        Country = "Bucuresti"
+                        Site = "http://www.grandhoteltraian.ro",
+                        Rooms = 15,
+                        Rating = 2 
                     },
                     new Hotel
                     {
-                        Id = 3,
-                        Name = "Hotel Mariko Inn",
-                        Description = "Descriere a la Mariko",
-                        Rating = 3,
-                        City = "Roman",
-                        Country = "Neamt"
+                        Id = 2,
+                        Name = "Hotel Mariko",
+                        Adress = "Descriere",
+                        City = "Bacau",
+                        Site = "http://www.grandhoteltraian.ro",
+                        Rooms = 15,
+                        Rating = 1 
                     }
                 };
             }

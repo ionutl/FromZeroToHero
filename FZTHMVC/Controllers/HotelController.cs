@@ -19,14 +19,14 @@ namespace FZTHMVC.Controllers
             return View();
         }
 
-      /*  public ActionResult Detail(Int32 id)
+       public ActionResult Detail(Int32 id)
         {
-            var hotel = Data.Hotels.FirstOrDefault(x => x.Id == id);
+            var hotel = FZTHMVC.DataAccess.Data.Hotels.FirstOrDefault(x => x.Id == id);
             if (hotel != null)
             {
                 return Json(hotel, JsonRequestBehavior.AllowGet);
             }
             return HttpNotFound();
-        }*/
+        }
 	}
 }
