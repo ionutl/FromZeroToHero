@@ -30,16 +30,16 @@
     <div class="row">
         @{Html.RenderPartial("_Navigation");}
     </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p class="text-center">From Zero to Hero - Teamnet Iasi </p>
-            </footer>
-        </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p class="text-center">From Zero to Hero - Teamnet Iasi </p>
+        </footer>
+    </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
