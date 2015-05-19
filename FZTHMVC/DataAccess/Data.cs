@@ -41,7 +41,7 @@ namespace FZTHMVC.DataAccess
                         Adress = "Descriere",
                         City = "Bacau",
                         Site = "http://www.grandhoteltraian.ro",
-                        Rooms = 15,
+                        Rooms = 10,
                         Rating = 1 
                     }
                 };

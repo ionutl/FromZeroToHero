@@ -2,6 +2,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
+@using FZTHMVC.DataAccess
+@model IEnumerable<Hotel>
 
 <h2>Index</h2>
 
@@ -49,8 +51,24 @@
                     <th>Numar stele</th>
                 </tr>
 
-                @using FZTHMVC.DataAccess
-                @foreach (Hotel h in Data.Hotels)
+                
+                @foreach (var h in Model)
+                {
+                   <tr>
+                        <td>@h.Name</td>
+                        <td>@h.Adress</td>
+                        <td>@h.City</td>
+                        <td>@h.Site</td>
+                        <td>@h.Rooms</td>
+                        <td>
+                            @for (int i = 0; i < h.Rating; i++)
+                            {
+                                <img src="Content/Images/star.jpg" />
+                            }
+                        </td>
+                    </tr> 
+                }
+                @*foreach (Hotel h in Data.Hotels)
                 {
                     <tr>
                         <td>@h.Name</td>
@@ -65,7 +83,7 @@
                             }
                         </td>
                     </tr>
-                }
+                }*@
             </table>
         </section>
 
