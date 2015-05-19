@@ -8,11 +8,7 @@ namespace FZTHMVC.DataAccess
 {
     public static class Data
     {
-        public static List<Hotel> Hotels
-        {
-            get
-            {
-                return new List<Hotel>()
+       private static List<Hotel> hotels = new List<Hotel>()
                 {
                     new Hotel
                     {
@@ -45,7 +41,9 @@ namespace FZTHMVC.DataAccess
                         Rating = 1 
                     }
                 };
-            }
-        }
+       public static List<Hotel> Hotels
+       {
+           get { return hotels; }
+       }
     }
 }
