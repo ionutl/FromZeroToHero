@@ -20,6 +20,21 @@ namespace FZTHMVC.Controllers
             return View();
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        public ActionResult Delete()
+        {
+            return View();
+        }
+
        public ActionResult Detail(Int32 id)
         {
             var hotel = FZTHMVC.DataAccess.Data.Hotels.FirstOrDefault(x => x.Id == id);

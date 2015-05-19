@@ -36,7 +36,7 @@ namespace FZTHMVC.DataAccess
                     },
                     new Hotel
                     {
-                        Id = 2,
+                        Id = 3,
                         Name = "Hotel Mariko",
                         Adress = "Descriere",
                         City = "Bacau",

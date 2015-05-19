@@ -49,6 +49,9 @@
                     <th>Site</th>
                     <th>Numar camere</th>
                     <th>Numar stele</th>
+                    <th>Create</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
 
                 
@@ -66,6 +69,9 @@
                                 <img src="Content/Images/star.jpg" />
                             }
                         </td>
+                       <td>@Html.ActionLink("Create", "Create")</td>
+                       <td>@Html.ActionLink("Edit", "Edit", new { id=h.Id })</td>
+                       <td>@Html.ActionLink("Delete", "Delete", new { id = h.Id })</td>
                     </tr> 
                 }
                 @*foreach (Hotel h in Data.Hotels)
