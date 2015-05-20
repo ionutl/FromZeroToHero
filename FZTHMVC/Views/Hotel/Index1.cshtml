@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <aside class="col-md-3">
+        <ul class="asideMenu">
+            <h3>Page navigation</h3>
+            <li><a href="#reservation">Reservation Form</a></li>
+            <li><a href="#hotelList">Hotel List</a></li>
+            <li><a href="#lastMinute">Last minute deals</a></li>
+        </ul>
+    </aside>
+    <section id="hotelList" class="col-md-10 col-md-offset-1">
+        <div id="hotelsContainer"></div>
+    </section>
+</div>
+
+
+
+@section Scripts{
+    <script type="text/javascript" src="~/Scripts/Hotels.js"></script>
+    <script type="text/javascript" src="~/Scripts/generator.js"></script>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    }

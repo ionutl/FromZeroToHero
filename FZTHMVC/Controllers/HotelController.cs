@@ -9,6 +9,12 @@ namespace FZTHMVC.Controllers
 {
     public class HotelController : Controller
     {
+
+        public ActionResult Index1()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Index()
         {
